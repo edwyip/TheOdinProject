@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const hands = ["rock", "paper", "scissors"]
+
+        function getComputerChoice() {
+            return hands[Math.floor(Math.random() * hands.length)]
+        }
+
+        function winDrawLose(result) {
+            switch (result) {
+                case "win":
+                    return "Ok you win, Avril Lavine.";
+                    break;
+                case "draw":
+                    return "It's a draw lol";
+                    break;
+                case "lose":
+                    return "LMAO you lost!"
+            }
+        }
+
+        function playRound(playerSelection, ComputerSelection = getComputerChoice()) {
+            playerSelection = playerSelection.toLowerCase()
+            ComputerSelection = ComputerSelection.toLowerCase()
+            let result;
+            switch (playerSelection) {
+                case "rock":
+                    switch (ComputerSelection) {
+                        case "rock":
+                            result = winDrawLose("draw")
+                            break
+                        case "paper":
+                            result = winDrawLose("lose")
+                            break
+                        case "scissors":
+                            result = winDrawLose("win")
+                            break
+                    };
+                    break;
+                case "paper":
+                    switch (ComputerSelection) {
+                        case "rock":
+                            result = winDrawLose("win")
+                            break
+                        case "paper":
+                            result = winDrawLose("draw")
+                            break
+                        case "scissors":
+                            result = winDrawLose("lose")
+                            break
+                    };
+                    break;
+                case "scissors":
+                    switch (ComputerSelection) {
+                        case "rock":
+                            result = winDrawLose("lose")
+                            break
+                        case "paper":
+                            result = winDrawLose("win")
+                            break
+                        case "scissors":
+                            result = winDrawLose("draw")
+                            break
+                    };
+                    break;
+            }
+            alert(result);
+            return result;
+        }
+
+        function game() {
+            const scores = {
+                player: 0,
+                computer: 0
+            }
+            for (let i = 0; i < 5; i++) {
+                let playerSelection = prompt();
+                let result = playRound(playerSelection)
+                if (result === winDrawLose("win")) {
+                    scores["player"]++
+                } else if (result === winDrawLose("lose")) {
+                    scores["computer"]++
+                } else continue;
+            }
+
+            if (scores["player"] > scores["computer"]) {
+                return "Congrats! You the winner."
+            } else if (scores["player"] < scores["computer"]) {
+                return "Oof. Computer won."
+            } else {
+                return "It's stalemate"
+            }
+        }
+    </script>
+</body>
+
+</html>
