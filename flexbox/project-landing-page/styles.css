@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+}
+
+.header,
+.body_1,
+.footer {
+    background-color: #1F2937;
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.header_flex {
+    max-width: 900px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: auto 16px;
+}
+
+.logo {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    gap: 1em;
+}
+
+.body_1_flex {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: 104px 16px;
+    max-width: 900px;
+}
+
+.body_1_texts {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1
+}
+
+.main {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8
+}
+
+.signup {
+    background-color: #3882F6;
+    font-size: 18px;
+    padding: 0.3em 1.5em;
+    border-radius: 0.5em;
+    color: inherit;
+    font-weight: bolder
+}
+
+.body_1_image {
+    box-sizing: border-box;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.body_2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 52px 0px 104px 0px;
+    gap: 52px;
+}
+
+.body_2_flex {
+    display: flex;
+    justify-content: center;
+    gap: 1.5em;
+    max-width: 900px;
+}
+
+.info_header {
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1F2937;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: center;
+    text-align: center;
+}
+
+.square {
+    width: 150px;
+    height: 150px;
+    border: 3px solid #3882F6;
+    border-radius: 1em;
+}
+
+.body_3 {
+    background-color: #E5E7EB;
+    font-size: 36px;
+    font-weight: light;
+    font-style: italic;
+    color: #1F2937;
+}
+
+.body_3_flex {
+    padding: 104px 12.5%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 900px;
+}
+
+.author {
+    align-self: flex-end;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: bolder;
+}
+
+.body_4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E5E7EB;
+}
+
+.body_4_flex {
+    background-color: #3882F6;
+    display: flex;
+    margin: 104px auto;
+    width: 80%;
+    max-width: 900px;
+    padding: 52px 32px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1em;
+}
+
+.header_4 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.signup2 {
+    border: 2px solid #E5E7EB;
+    border-radius: 0.5em;
+    padding: 0.5em 1.5em;
+    font-weight: bolder;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_text {
+    padding: 48px 0;
+    font-weight: bolder;
+}
