@@ -1,0 +1,173 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+@font-face{
+    font-family: "outrun";
+    src: url("assets/outrun_future/Outrun\ future.otf");
+    src:url("assets/outrun_future/Outrun\ future.otf") format("opentype");
+    src:url("assets/outrun_future/Outrun\ future\ Bold.otf") format("opentype");
+    src:url("assets/outrun_future/Outrun\ future\ Bold\ Italic.otf") format("opentype");
+}
+html{
+    margin:0;
+    padding:0;
+    height:100vh;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    margin:0;
+    padding:0;
+    height:100%;
+    box-sizing: border-box;
+}
+
+.left{
+    background:url("assets/a66c2949079885.58aad107893ca.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+}
+
+.logo{
+    background:black;
+    opacity:70%;
+    margin-top:20vh;
+    text-align:center;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    padding: 1em 2em;
+    height: 30vh;
+}
+
+.logo img{
+    max-height: 100%;
+}
+
+.logotext{
+    font-family: "outrun", Arial, Helvetica, sans-serif;
+    font-size: 10vh;
+    font-style: italic bold;
+    color:#FEFEFE;
+}
+
+.right{
+    height:100vh;
+    background-color: #0e0e0e;
+    flex: 1;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #E4E5E6;
+}
+
+.right p{
+    max-width:80%;
+    font-size: 24px;
+}
+
+.section_1, .section_2, .section_3{
+    padding-left:30px;
+}
+
+.sign-up{
+    display: flex;
+    flex-direction: column;
+}
+
+.section_1{
+    flex:2;
+    color:#909;
+
+}
+
+.section_2{
+    background-color: #909;
+    padding: 30px;
+    flex:3;
+}
+
+.section_2 h2{
+    font-size:36px;
+}
+
+.section_3{
+    flex:3;
+    padding:30px 
+}
+.form-row{
+
+    font-size:28px;
+    display:flex;
+    gap:3em;
+    padding:1em 0;
+}
+
+.form-item{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-item input{
+    height: 24px;
+    width: 200px;
+    padding:3px 5px;
+    font-size: 18px;
+    color:#909
+}
+
+form button{
+    border-radius:3px;
+    font-size:24px;
+    padding:0.3em 2em;
+    background-color:black;
+    font-family: inherit;
+    color:#909;
+    border: 1px solid #909;
+}

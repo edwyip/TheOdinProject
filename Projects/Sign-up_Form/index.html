@@ -10,7 +10,56 @@
 </head>
 
 <body>
-
+    <div class="left">
+        <div class="logo">
+            <img src="assets/odin-lined.png" alt="LOGO">
+            <span class="logotext">ODIN</span>
+        </div>
+    </div>
+    <div class="right">
+        <form class="sign-up" action="">
+            <div class="section_1">
+                <p>These are just random text to test out the page. No meaning whatsoever. You know.</p>
+                <p>Some dummy text</p>
+            </div>
+            <div class="section_2">
+                <h2>Sign up to join our awesome cult!</h2>
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" id="fname" name="fname" required pattern="[a-zA-Z]+([\s\.\-]+[a-zA-Z]{2,})*">
+                    </div>
+                    <div class="form-item">
+                        <label for="lname">LAST NAME</label>
+                        <input type="text" id="lname" name="lname" required pattern="[a-zA-Z]{2,}">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="mail">EMAIL</label>
+                        <input type="email" id="mail" name="mail" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="phone">PHONE NUMBER</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-item">
+                        <label for="pass">PASSWORD</label>
+                        <input type="password" id="pass" name="pass" required>
+                    </div>
+                    <div class="form-item">
+                        <label for="cpass">CONFIRM PASSWORD</label>
+                        <input type="password" id="cpass" name="cpass" required>
+                    </div>
+                </div>
+            </div>
+            <div class="section_3">
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+    </div>
 </body>
 
 </html>
