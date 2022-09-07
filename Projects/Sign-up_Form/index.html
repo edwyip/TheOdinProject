@@ -20,38 +20,39 @@
         <form class="sign-up" action="">
             <div class="section_1">
                 <p>These are just random text to test out the page. No meaning whatsoever. You know.</p>
-                <p>Some dummy text</p>
+                <p>Having a midlife crisis? No job? No girlfriend? We here have all the people just like you! Dive into countless conspiracy theories and let them consume all the time you have no other use for.</p>
+                <p>Some dummy text to test this almost unreadable font.</p>
             </div>
             <div class="section_2">
                 <h2>Sign up to join our awesome cult!</h2>
                 <div class="form-row">
                     <div class="form-item">
                         <label for="fname">FIRST NAME</label>
-                        <input type="text" id="fname" name="fname" required pattern="[a-zA-Z]+([\s\.\-]+[a-zA-Z]{2,})*">
+                        <input type="text" id="fname" name="fname" required pattern="[a-zA-Z]+([\s\.\-]+[a-zA-Z]{2,})*" placeholder="Alex">
                     </div>
                     <div class="form-item">
                         <label for="lname">LAST NAME</label>
-                        <input type="text" id="lname" name="lname" required pattern="[a-zA-Z]{2,}">
+                        <input type="text" id="lname" name="lname" required pattern="[a-zA-Z]{2,}" placeholder="Jones">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-item">
                         <label for="mail">EMAIL</label>
-                        <input type="email" id="mail" name="mail" required>
+                        <input type="email" id="mail" name="mail" required placeholder="epstein@deepstate.com">
                     </div>
                     <div class="form-item">
                         <label for="phone">PHONE NUMBER</label>
-                        <input type="tel" id="phone" name="phone" required>
+                        <input type="tel" id="phone" name="phone" required placeholder="373-617-8890">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-item">
                         <label for="pass">PASSWORD</label>
-                        <input type="password" id="pass" name="pass" required>
+                        <input type="password" id="pass" name="pass" required pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16})" placeholder="8-16 characters long">
                     </div>
                     <div class="form-item">
                         <label for="cpass">CONFIRM PASSWORD</label>
-                        <input type="password" id="cpass" name="cpass" required>
+                        <input type="password" id="cpass" name="cpass" required pattern="((?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,16})" placeholder="same as password">
                     </div>
                 </div>
             </div>
