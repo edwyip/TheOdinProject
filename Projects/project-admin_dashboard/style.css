@@ -72,6 +72,8 @@ body,
     padding: 1rem 3rem;
     gap: 1rem;
     font-weight: bold;
+    box-shadow: 0 5px rgb(192, 192, 192, 0.3);
+    z-index: 1;
 }
 
 .searchbar {
@@ -130,8 +132,8 @@ body,
 }
 
 .mini_pic {
-    height: 50px;
-    width: 50px;
+    height: 36px;
+    width: 36px;
     overflow: hidden;
     border-radius: 50%;
 }
@@ -148,8 +150,8 @@ body,
 }
 
 .profile_pic {
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 1em;
@@ -202,6 +204,8 @@ body,
 .card {
     padding: 10px;
     height: 200px;
+    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
+    z-index: 1;
 }
 
 .a_cards {
