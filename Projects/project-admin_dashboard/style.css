@@ -223,6 +223,7 @@ body,
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     align-content: space-around;
+    align-items: start;
     padding: 1rem;
     box-shadow: 3px 5px var(--shadow);
 }
@@ -233,9 +234,14 @@ body,
     padding-top: 10px;
 }
 
+.a_card:last-child {
+    border-bottom: none;
+}
+
 .a_title {
     font-size: 12px;
     font-weight: bold;
+    padding-bottom: 0.2rem;
 }
 
 .a_content {
