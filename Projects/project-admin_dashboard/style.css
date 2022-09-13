@@ -3,6 +3,8 @@ body,
 .container {
     margin: 0;
     padding: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @font-face {
@@ -20,13 +22,16 @@ body,
 
 :root {
     --blue: #0284c7;
-    --grey: #d0e0f8;
+    --grey: #e1e8ec;
+    --orange: #f5b70b;
+    --content: #6b7280;
+    --shadow: rgb(192, 192, 192, 0.3);
 }
 
 .container {
     display: grid;
-    grid-template-columns: minmax(250px, 1fr) minmax(600px, 4fr);
-    grid-template-rows: minmax(180px, 18vh) minmax(820px, 82vh);
+    grid-template-columns: minmax(200px, 1fr) minmax(800px, 4fr);
+    grid-template-rows: minmax(180px, 20%) minmax(720px, 80%);
     font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 
@@ -57,7 +62,7 @@ body,
 }
 
 .dashboard {
-    font-size: 32px;
+    font-size: 28px;
     gap: 0.3rem;
 }
 
@@ -72,7 +77,7 @@ body,
     padding: 1rem 3rem;
     gap: 1rem;
     font-weight: bold;
-    box-shadow: 0 5px rgb(192, 192, 192, 0.3);
+    box-shadow: 0 5px var(--shadow);
     z-index: 1;
 }
 
@@ -102,8 +107,9 @@ body,
     grid-template-rows: 1fr 1fr;
     grid-row: 2/3;
     background-color: var(--grey);
-    padding: 18px;
+    padding: 2rem 1rem;
     gap: 18px;
+    justify-content: space-between;
 }
 
 .card,
@@ -128,7 +134,7 @@ body,
 }
 
 .mdi-bell-ring-outline {
-    font-size: 22px;
+    font-size: 20px;
 }
 
 .mini_pic {
@@ -171,10 +177,10 @@ body,
 }
 
 .hi h2 {
-    margin-top: 0.5rem;
+    margin-top: 0.3rem;
     margin-bottom: 0;
     padding: 0;
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .buttons {
@@ -199,31 +205,67 @@ body,
     display: grid;
     gap: 24px;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, minmax(200px, 1fr))
 }
 
 .card {
-    padding: 10px;
-    height: 200px;
-    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
+    padding: 1rem;
+    box-shadow: 3px 5px var(--shadow);
     z-index: 1;
+    border-left: 8px solid var(--orange);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 
 .a_cards {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 10px;
-    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    align-content: space-around;
+    padding: 1rem;
+    box-shadow: 3px 5px var(--shadow);
 }
 
 .a_card {
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--shadow);
     padding-bottom: 10px;
     padding-top: 10px;
 }
 
 .a_title {
-    font-size: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.a_content {
+    font-size: 10px;
+    color: var(--content);
+}
+
+.title {
+    font-size: 18px;
+    padding-bottom: 0.8rem;
+    font-weight: bold;
+}
+
+.p_title {
+    font-size: 15px;
+    font-weight: bold;
+    align-self: end;
+    padding-bottom: 3px;
+}
+
+.p_buttons {
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 0;
+}
+
+.content {
+    font-size: 12px;
+    color: var(--content);
 }
 
 .trends {
@@ -231,4 +273,5 @@ body,
     grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(4, 1fr);
     padding: 10px;
+    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
 }
