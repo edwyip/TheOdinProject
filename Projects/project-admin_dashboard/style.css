@@ -1,308 +1,314 @@
 html,
 body,
 .container {
+    height: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    width: 100%
 }
 
 @font-face {
     font-family: "roboto";
     src: url(assets/fonts/roboto/Roboto-Regular.ttf);
-    src: url(assets/fonts/roboto/Roboto-Regular.ttf) format("truetype");
+    src: url(assets/fonts/roboto/Roboto-Regular.ttf) format("truetype")
 }
 
 @font-face {
     font-family: "roboto";
-    src: url(assets/fonts/roboto/Roboto-Bold.ttf);
-    src: url(assets/fonts/roboto/Roboto-Bold.ttf) format("truetype");
     font-weight: bold;
+    src: url(assets/fonts/roboto/Roboto-Bold.ttf);
+    src: url(assets/fonts/roboto/Roboto-Bold.ttf) format("truetype")
 }
 
 :root {
     --blue: #0284c7;
+    --content: #6b7280;
     --grey: #e1e8ec;
     --orange: #f5b70b;
-    --content: #6b7280;
-    --shadow: rgb(192, 192, 192, 0.3);
+    --shadow: rgb(192, 192, 192, 0.3)
 }
 
 .container {
     display: grid;
-    grid-template-columns: minmax(200px, 1fr) minmax(800px, 4fr);
-    grid-template-rows: minmax(180px, 20%) minmax(720px, 80%);
     font-family: "roboto", Arial, Helvetica, sans-serif;
+    grid-template-columns: minmax(200px, 1fr) minmax(800px, 4fr);
+    grid-template-rows: minmax(180px, 20%) minmax(720px, 80%)
 }
 
 .sidebar {
-    background-color: var(--blue);
-    grid-row: 1 / -1;
-    color: white;
-    font-weight: bold;
-    display: grid;
     align-content: start;
     align-items: center;
-    padding: 1rem;
-    gap: 0.8em;
+    background-color: var(--blue);
+    color: white;
+    display: grid;
     font-size: 20px;
+    font-weight: bold;
+    gap: .8em;
+    grid-row: 1 / -1;
     grid-template-columns: 36px 1fr;
     justify-content: center;
     justify-items: start;
+    padding: 1rem
 }
 
 .sidebar .mdi {
     justify-self: center;
-    padding: 0;
-    margin-bottom: 0.2em;
+    margin-bottom: .2em;
+    padding: 0
 }
 
 .sidebar .br {
-    grid-column: 1/3;
+    grid-column: 1/3
 }
 
 .dashboard {
     font-size: 28px;
-    gap: 0.3rem;
+    gap: .3rem
 }
 
 .mdi-view-dashboard {
-    font-size: 48px;
+    font-size: 48px
 }
 
 .nav {
+    box-shadow: 0 5px var(--shadow);
     display: grid;
+    font-weight: bold;
+    gap: 1rem;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: 1fr 1fr;
     padding: 1rem 3rem;
-    gap: 1rem;
-    font-weight: bold;
-    box-shadow: 0 5px var(--shadow);
-    z-index: 1;
+    z-index: 1
 }
 
 .searchbar {
-    display: flex;
-    justify-content: start;
     align-items: center;
+    display: flex;
+    justify-content: start
 }
 
 .mdi-magnify {
     font-size: 24px;
-    padding-right: 0.5rem;
+    padding-right: .5rem
 }
 
 #bar {
-    flex: 1;
     background-color: var(--grey);
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
     border: none;
+    border-radius: 20px;
+    flex: 1;
     font-size: 24px;
+    padding: .3rem 1rem
 }
 
 .contents {
+    background-color: var(--grey);
     display: grid;
+    gap: 18px;
+    grid-row: 2/3;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-row: 2/3;
-    background-color: var(--grey);
-    padding: 2rem 1rem;
-    gap: 18px;
     justify-content: space-between;
+    padding: 2rem 1rem
 }
 
 .card,
 .a_cards,
 .trends {
     background-color: white;
-    border-radius: 5px;
+    border-radius: 5px
 }
 
 .projects {
     display: flex;
     flex-direction: column;
     grid-row: 1/3;
-    justify-content: space-between;
+    justify-content: space-between
 }
 
 .widgets {
-    display: flex;
-    justify-content: end;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    display: flex;
     font-size: 18px;
     font-weight: bold;
+    gap: 1rem;
+    justify-content: end;
+    padding: 1rem
 }
 
 .mdi-bell-ring-outline {
-    font-size: 20px;
+    font-size: 20px
 }
 
 .mini_pic {
-    height: 36px;
-    width: 36px;
-    overflow: hidden;
     border-radius: 50%;
+    height: 36px;
+    overflow: hidden;
+    width: 36px
 }
 
 .mini_pic img {
-    width: inherit;
     height: inherit;
     object-fit: cover;
+    width: inherit
 }
 
 .headers {
-    display: flex;
     align-items: center;
+    display: flex
 }
 
 .profile_pic {
-    height: 80px;
-    width: 80px;
     border-radius: 50%;
-    overflow: hidden;
+    height: 80px;
     margin-right: 1em;
+    overflow: hidden;
+    width: 80px
 }
 
 .profile_pic img {
     height: inherit;
-    width: inherit;
     object-fit: cover;
+    width: inherit
 }
 
 .hi,
 .hi p {
     font-size: 12px;
-    padding: 0;
     margin: 0;
+    padding: 0
 }
 
 .hi h2 {
-    margin-top: 0.3rem;
-    margin-bottom: 0;
-    padding: 0;
     font-size: 24px;
+    margin-bottom: 0;
+    margin-top: .3rem;
+    padding: 0
 }
 
 .buttons {
-    display: flex;
     align-items: center;
-    justify-content: end;
+    display: flex;
     gap: 1.5rem;
+    justify-content: end
 }
 
 .buttons button {
     background-color: var(--blue);
     border: none;
     border-radius: 20px;
-    font-size: 14px;
     color: white;
+    font-size: 14px;
     font-weight: inherit;
-    width: 90px;
     height: 40px;
+    width: 90px
 }
 
 .cards {
-    flex: 1;
     display: grid;
+    flex: 1;
     gap: 24px;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-template-rows: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(3, minmax(200px, 1fr))
 }
 
 .card {
-    padding: 1rem 1rem 0 1rem;
-    box-shadow: 3px 5px var(--shadow);
-    z-index: 1;
     border-left: 8px solid var(--orange);
+    box-shadow: 3px 5px var(--shadow);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 4fr 1fr;
+    padding: 1rem 1rem 0;
+    z-index: 1
 }
 
-.announcement {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+.announcements,
+.trending {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
 }
 
 .a_cards {
+    align-content: center;
+    align-items: center;
+    box-shadow: 3px 5px var(--shadow);
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    align-content: space-around;
-    align-items: start;
     padding: 1rem;
-    box-shadow: 3px 5px var(--shadow);
+    margin-bottom: 1rem;
 }
 
 .a_card {
     border-bottom: 1px solid var(--shadow);
     padding-bottom: 10px;
-    padding-top: 10px;
 }
 
 .a_card:last-child {
-    border-bottom: none;
+    border-bottom: none
 }
 
 .a_title {
     font-size: 12px;
     font-weight: bold;
-    padding-bottom: 0.2rem;
+    padding-bottom: .2rem
 }
 
 .a_content {
-    font-size: 10px;
     color: var(--content);
+    font-size: 10px
 }
 
 .title {
     font-size: 18px;
-    padding-bottom: 0.8rem;
     font-weight: bold;
+    padding-bottom: .8rem
 }
 
 .p_title {
+    align-self: end;
     font-size: 15px;
     font-weight: bold;
-    align-self: end;
-    padding-bottom: 3px;
+    padding-bottom: 3px
 }
 
 .p_buttons {
     display: flex;
-    justify-content: end;
     gap: 20px;
-    padding: 0;
+    justify-content: end;
+    padding: 0
 }
 
 .content {
-    font-size: 12px;
     color: var(--content);
+    font-size: 12px
 }
 
 .trends {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: repeat(4, 1fr);
-    padding: 1rem;
-    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
-    gap: 1rem;
-    justify-content: center;
+    align-content: center;
     align-items: center;
-    align-content: stretch;
+    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    justify-content: start;
+    justify-items: start;
+    padding: 1rem
 }
 
 .trends .mini_pic {
-    justify-self: end;
+    justify-self: end
 }
 
 .handle,
 .bio {
-    font-size: 12px;
+    font-size: 12px
+}
+
+.handle {
+    padding-bottom: .2rem
 }
 
 .bio {
@@ -312,10 +318,10 @@ body,
 .trending,
 .projects,
 .announcement {
-    padding: 0;
     margin: 0;
+    padding: 0
 }
 
 .trending {
-    align-self: end;
+    align-self: end
 }
