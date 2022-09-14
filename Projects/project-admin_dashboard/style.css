@@ -50,18 +50,18 @@ a {
     grid-template-columns: 36px 1fr;
     justify-content: center;
     justify-items: start;
-    padding: 1rem
+    padding: 1rem;
+    gap: 1rem;
 }
 
 .sidebar .mdi {
     justify-self: center;
-    margin-bottom: .2em;
-    padding: 0 0 1rem 0;
 }
 
-.sidebar .mdi:hover {
+.mdi:hover,
+.page:hover,
+.dashboard:hover {
     cursor: pointer;
-    background-color: black;
 }
 
 .sidebar .br {
@@ -78,7 +78,7 @@ a {
 }
 
 .nav {
-    font-family: "calson antique";
+    font-family: "caslon antique";
     background-color: black;
     box-shadow: 0 5px var(--shadow);
     display: grid;
@@ -111,7 +111,14 @@ a {
     border-radius: 20px;
     flex: 1;
     font-size: 24px;
-    padding: .3rem 1rem
+    padding: .3rem 1rem;
+    color: var(--blood);
+    font-family: "caslon antique";
+}
+
+#bar:focus,
+#bar:active {
+    outline: none;
 }
 
 .contents {
@@ -123,7 +130,7 @@ a {
     grid-template-rows: 1fr 1fr;
     justify-content: space-between;
     padding: 2rem 1rem;
-    font-family: "calson antique";
+    font-family: "caslon antique";
 }
 
 .title {
@@ -197,7 +204,7 @@ a {
 
 .hi,
 .hi p {
-    font-size: 12px;
+    font-size: 16px;
     margin: 0;
     padding: 0
 }
@@ -222,7 +229,7 @@ a {
     border: 1px solid var(--blood);
     border-radius: 20px;
     color: var(--blood);
-    font-size: 14px;
+    font-size: 16px;
     font-weight: inherit;
     height: 40px;
     width: 90px;
@@ -282,14 +289,14 @@ button:active {
 }
 
 .a_title {
-    font-size: 12px;
+    font-size: 15px;
     font-weight: bold;
     padding-bottom: .2rem
 }
 
 .a_content {
     color: var(--content);
-    font-size: 10px;
+    font-size: 12px;
     padding-bottom: 1rem;
 }
 
@@ -301,7 +308,7 @@ button:active {
 
 .p_title {
     align-self: end;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: bold;
     padding-bottom: 3px
 }
@@ -315,7 +322,7 @@ button:active {
 
 .content {
     color: var(--content);
-    font-size: 12px
+    font-size: 15px;
 }
 
 .trends {
@@ -337,7 +344,7 @@ button:active {
 
 .handle,
 .bio {
-    font-size: 12px
+    font-size: 15px
 }
 
 .handle {
