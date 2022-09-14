@@ -1,49 +1,51 @@
-html,
-body,
-.container {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    width: 100%
+@font-face {
+    font-family: "caslon antique";
+    src: url(assets/fonts/caslon-antique/CaslonAntique.ttf);
+    src: url(assets/fonts/caslon-antique/CaslonAntique.ttf) format("truetype");
 }
 
 @font-face {
-    font-family: "roboto";
-    src: url(assets/fonts/roboto/Roboto-Regular.ttf);
-    src: url(assets/fonts/roboto/Roboto-Regular.ttf) format("truetype")
-}
-
-@font-face {
-    font-family: "roboto";
+    font-family: "caslon antique";
     font-weight: bold;
-    src: url(assets/fonts/roboto/Roboto-Bold.ttf);
-    src: url(assets/fonts/roboto/Roboto-Bold.ttf) format("truetype")
+    src: url(assets/fonts/caslon-antique/CaslonAntique-Bold.ttf);
+    src: url(assets/fonts/caslon-antique/CaslonAntique-Bold.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "seagram";
+    src: url(assets/fonts/Seagram.ttf);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
 }
 
 :root {
-    --blue: #0284c7;
-    --content: #6b7280;
-    --grey: #e1e8ec;
-    --orange: #f5b70b;
-    --shadow: rgb(192, 192, 192, 0.3)
+    --content: #806d6b;
+    --dry-blood: #941d1d;
+    --shadow: rgba(53, 10, 10, 0.3);
+    --blood: rgb(173, 16, 16);
+    --stone: #1c1917;
 }
 
 .container {
     display: grid;
-    font-family: "roboto", Arial, Helvetica, sans-serif;
+    font-family: "seagram", Arial, Helvetica, sans-serif;
     grid-template-columns: minmax(200px, 1fr) minmax(800px, 4fr);
-    grid-template-rows: minmax(180px, 20%) minmax(720px, 80%)
+    grid-template-rows: minmax(180px, 20%) minmax(720px, 80%);
+    color: var(--blood);
 }
 
 .sidebar {
     align-content: start;
     align-items: center;
-    background-color: var(--blue);
-    color: white;
+    background-color: #111111;
+    color: var(--blood);
     display: grid;
     font-size: 20px;
     font-weight: bold;
-    gap: .8em;
+    font-family: "seagram";
     grid-row: 1 / -1;
     grid-template-columns: 36px 1fr;
     justify-content: center;
@@ -54,7 +56,12 @@ body,
 .sidebar .mdi {
     justify-self: center;
     margin-bottom: .2em;
-    padding: 0
+    padding: 0 0 1rem 0;
+}
+
+.sidebar .mdi:hover {
+    cursor: pointer;
+    background-color: black;
 }
 
 .sidebar .br {
@@ -66,11 +73,13 @@ body,
     gap: .3rem
 }
 
-.mdi-view-dashboard {
+.mdi-water {
     font-size: 48px
 }
 
 .nav {
+    font-family: "calson antique";
+    background-color: black;
     box-shadow: 0 5px var(--shadow);
     display: grid;
     font-weight: bold;
@@ -79,6 +88,10 @@ body,
     grid-template-rows: 1fr 1fr;
     padding: 1rem 3rem;
     z-index: 1
+}
+
+.nav h2 {
+    font-family: "seagram";
 }
 
 .searchbar {
@@ -93,7 +106,7 @@ body,
 }
 
 #bar {
-    background-color: var(--grey);
+    background-color: var(--stone);
     border: none;
     border-radius: 20px;
     flex: 1;
@@ -102,14 +115,19 @@ body,
 }
 
 .contents {
-    background-color: var(--grey);
+    background-color: var(--stone);
     display: grid;
     gap: 18px;
     grid-row: 2/3;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
     justify-content: space-between;
-    padding: 2rem 1rem
+    padding: 2rem 1rem;
+    font-family: "calson antique";
+}
+
+.title {
+    font-family: "seagram";
 }
 
 .projects,
@@ -123,7 +141,7 @@ body,
 .card,
 .a_cards,
 .trends {
-    background-color: white;
+    background-color: black;
     border-radius: 5px
 }
 
@@ -195,18 +213,33 @@ body,
     align-items: center;
     display: flex;
     gap: 1.5rem;
-    justify-content: end
+    justify-content: end;
+    font-family: inherit;
 }
 
 .buttons button {
-    background-color: var(--blue);
-    border: none;
+    background-color: black;
+    border: 1px solid var(--blood);
     border-radius: 20px;
-    color: white;
+    color: var(--blood);
     font-size: 14px;
     font-weight: inherit;
     height: 40px;
-    width: 90px
+    width: 90px;
+    font-family: inherit;
+}
+
+button:hover {
+    border: none;
+    background-color: var(--blood);
+    color: black;
+    cursor: pointer;
+}
+
+button:active {
+    position: relative;
+    top: 2px;
+    left: 2px;
 }
 
 .cards {
@@ -214,11 +247,12 @@ body,
     flex: 1;
     gap: 24px;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
-    grid-template-rows: repeat(3, minmax(200px, 1fr))
+    grid-template-rows: repeat(3, minmax(200px, 1fr));
 }
 
 .card {
-    border-left: 8px solid var(--orange);
+    background-color: black;
+    border-left: 8px solid var(--dry-blood);
     box-shadow: 3px 5px var(--shadow);
     display: grid;
     grid-template-columns: 1fr;
@@ -287,7 +321,7 @@ body,
 .trends {
     align-content: center;
     align-items: center;
-    box-shadow: 3px 5px rgb(192, 192, 192, 0.3);
+    box-shadow: 3px 5px var(--shadow);
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr 3fr;
