@@ -67,14 +67,21 @@ body {
     grid-template-rows: repeat(auto-fit, 250px);
     grid-auto-rows: 250px;
     justify-content: center;
+    padding: 1rem;
 }
 
 .book {
     border: 2px solid var(--b-color);
+    padding: 3px;
+    display: grid;
+    grid-template-rows: 20px 1fr;
 }
 
 .delete-book {
-    float: right;
+    position: relative;
+    left: 3px;
+    bottom: 3px;
+    justify-self: right;
 }
 
 .delete-book>button {
@@ -86,4 +93,39 @@ body {
 
 .delete-book>button:hover {
     cursor: pointer;
+}
+
+.info {
+    padding: 0 1rem;
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 1fr;
+    gap: 0.3rem;
+    font-size: 15px;
+}
+
+.info .title {
+    font-size: 24px;
+    font-weight: 700;
+    justify-self: center;
+    text-align: center;
+    align-self: center;
+}
+
+.info .author {
+    font-style: italic;
+    justify-self: center;
+    font-size: 18px;
+}
+
+.info .read {
+    display: flex;
+    align-items: baseline;
+}
+
+.read span {
+    padding-right: 5px;
+}
+
+.read div {
+    padding-right: 3px;
 }
