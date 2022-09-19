@@ -39,6 +39,9 @@ function addBook(book) {
     const delBtn = document.createElement("button")
     delBtn.textContent = "x"
     del.appendChild(delBtn)
+    delBtn.addEventListener("click", () => {
+        books.removeChild(newBook)
+    })
 
     //make the info section
     const info = document.createElement("div")
@@ -74,10 +77,3 @@ function displayBooks(library) {
 }
 
 displayBooks(mylibrary)
-
-function deleteBook(book) {
-    const delBtn = document.querySelector("delete-book")
-    delBtn.addEventListener("click", () => {
-        delBtn.parentNode.setAttribute("style", "display:none")
-    })
-}
