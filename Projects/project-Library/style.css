@@ -1,0 +1,89 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: max(100vh, 480px);
+    width: max(100vw, 480px);
+}
+
+:root {
+    --b-color: rgb(71, 60, 60);
+    --b-color-text: aliceblue;
+    --b-color-body: blanchedalmond;
+}
+
+.header {
+    display: flex;
+    font-size: 36px;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--b-color);
+    color: var(--b-color-text);
+}
+
+.logo {
+    flex: 1;
+}
+
+.new-book>button {
+    background-color: aliceblue;
+    color: rgb(71, 60, 60);
+    border-radius: 1rem;
+    padding: 0.5rem 1rem;
+}
+
+.new-book>button:hover {
+    background-color: var(--b-color-body);
+    color: var(--b-color);
+    cursor: pointer;
+}
+
+.new-book>button:active {
+    position: relative;
+    left: 1px;
+    top: 1px
+}
+
+.body {
+    flex: 1 1 auto;
+    border: 3px solid red;
+    background-color: var(--b-color-body);
+}
+
+.footer {
+    display: flex;
+    background-color: var(--b-color);
+    color: var(--b-color-text);
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.books {
+    display: grid;
+    padding: 1rem;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 200px));
+    grid-template-rows: repeat(auto-fit, 250px);
+    grid-auto-rows: 250px;
+    justify-content: center;
+}
+
+.book {
+    border: 2px solid var(--b-color);
+}
+
+.delete-book {
+    float: right;
+}
+
+.delete-book>button {
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+}
+
+.delete-book>button:hover {
+    cursor: pointer;
+}
