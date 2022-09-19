@@ -127,4 +127,15 @@ document.addEventListener("click", (e) => {
     }
 })
 
+//Book adding functionality, will come back later
+// const submitBtn = document.querySelector(".popup-form .submit")
+// submitBtn.addEventListener("click", () => {
+//     let newTitle = document.querySelector(".new-title").value
+//     let newAuthor = document.querySelector(".new-author").value
+//     let newPages = document.querySelector(".new-pages").value
+//     let newRead = document.querySelector("new-read").value
+//     let book = new Book(newTitle, newAuthor, newPages, newRead)
+//     addBookToLibrary(book)
+// })
+
 displayBooks(mylibrary)
