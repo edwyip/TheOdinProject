@@ -19,7 +19,7 @@ function addBookToLibrary(book) {
 
 const OMATS = new Book("Old Man and the Sea", "Ernest Hemingway", 292, true)
 const ONE984 = new Book("1984", "George Orwell", 199, false)
-const METAMORPHOSIS = new Book("Metamorphosis", "Franz Kafka", 377, true)
+const METAMORPHOSIS = new Book("Metamorphosis", "Franz Kafka", 377, false)
 const SUTTREE = new Book("Suttree", "Cormac McCarthy", 577, true)
 
 addBookToLibrary(OMATS)
@@ -54,7 +54,45 @@ function addBook(book) {
                 newDiv.textContent = "Total Pages: " + book[attr]
                 break
             case "read":
-                newDiv.textContent = (book[attr] === true) ? "Already read" : "Not read yet"
+                const readText = document.createElement("span")
+                readText.textContent = "Read: "
+
+                //create input and label for Yes
+                const readYes = document.createElement("div")
+                const inputYes = document.createElement("input")
+                inputYes.type = "radio"
+                inputYes.name = book.title + "-read"
+                inputYes.value = "Yes"
+                inputYes.id = book.title + "-read"
+                const labelYes = document.createElement("label")
+                labelYes.setAttribute("for", inputYes.name)
+                labelYes.textContent = "Yes"
+                readYes.appendChild(inputYes)
+                readYes.appendChild(labelYes)
+
+                //create input and label for No
+                const readNo = document.createElement("div")
+                const inputNo = document.createElement("input")
+                inputNo.type = "radio"
+                inputNo.name = book.title + "-read"
+                inputNo.value = "No"
+                inputNo.id = book.title + "read"
+                const labelNo = document.createElement("label")
+                labelNo.setAttribute("for", inputNo.name)
+                labelNo.textContent = "No"
+                readNo.appendChild(inputNo)
+                readNo.appendChild(labelNo)
+
+                //append all the elements to div "read"
+                newDiv.appendChild(readText)
+                newDiv.appendChild(readYes)
+                newDiv.appendChild(readNo)
+
+                if (book[attr]) {
+                    inputYes.setAttribute("checked", "")
+                } else {
+                    inputNo.setAttribute("checked", "")
+                }
                 break
             default:
                 newDiv.textContent = book[attr]
@@ -77,3 +115,15 @@ function displayBooks(library) {
 }
 
 displayBooks(mylibrary)
+
+function addReadToDiv(div, book) {
+    if (attr === true) {
+        div.innerHTML = `<span>Read: </span>
+        <div>
+            <input type="radio" name="read+" id="already" value="already">
+            <label for="already">Yes</label>
+        </div>
+        <div class="div"><input type="radio" name="read" id="not-yet" value="not-yet"><label for="not-yet">No</label></div>
+    </div>`
+    }
+}
