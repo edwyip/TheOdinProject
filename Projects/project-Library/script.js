@@ -113,17 +113,18 @@ function displayBooks(library) {
         addBook(book)
     }
 }
+const popup = document.querySelector(".popup-form")
+let newBook = document.querySelector(".new-book > button")
+newBook.addEventListener("click", () => {
+    //this is a work-around by adding some timeout, otherwise the popup closing triggers immediately and close the popup again
+    setTimeout(() => popup.classList.add("show-block"), 100)
+})
+
+document.addEventListener("click", (e) => {
+    const isClosest = e.target.closest(".popup-form")
+    if (!isClosest & popup.classList.contains("show-block")) {
+        popup.classList.remove("show-block")
+    }
+})
 
 displayBooks(mylibrary)
-
-function addReadToDiv(div, book) {
-    if (attr === true) {
-        div.innerHTML = `<span>Read: </span>
-        <div>
-            <input type="radio" name="read+" id="already" value="already">
-            <label for="already">Yes</label>
-        </div>
-        <div class="div"><input type="radio" name="read" id="not-yet" value="not-yet"><label for="not-yet">No</label></div>
-    </div>`
-    }
-}

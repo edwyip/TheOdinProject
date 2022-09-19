@@ -15,6 +15,32 @@
         <div class="logo">Library</div>
         <div class="new-book"><button>New Book</button></div>
     </div>
+    <div class="popup-form">
+        <form action="" method="post">
+            <div>
+                <input type="text" id="new-title" name="new-title" placeholder="Title" required>
+                <label for="new-title">Title</label>
+            </div>
+            <div>
+                <input type="text" id="new-author" name="new-author" placeholder="Author" required>
+                <label for="new-author">Author</label>
+            </div>
+            <div><input type="number" id="new-pages" name="new-pages" placeholder="Total Pages">
+                <label for="new-pages">Total Pages</label>
+            </div>
+            <div>
+                <div>Have you read the book yet?</div>
+                <input type="radio" id="new-read-yes" name="new-read" value="yes">
+                <label for="new-read-yes">Yes</label>
+                <input type="radio" name="new-read" id="new-read-no" value="no">
+                <label for="new-read-no">No</label>
+            </div>
+            <div class="new-buttons">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
     <div class="body">
         <div class="books">
             <div class="book">
