@@ -18,7 +18,7 @@ const Gameboard = (function() {
         bot:["left", "center", "right"],
     }
     const board={}
-    const boardList = ["top","mid","bot","left","center","right"]
+    const boardList = ["top","mid","bot","left","center","right", "down", "up"]
     for (let item of boardList){
         board[item] = []
     }
@@ -44,6 +44,7 @@ const Gameboard = (function() {
         newGameBtn.addEventListener("click", () => {
             const container = document.querySelector(".container")
             init(container)
+            let num=1
             for (const [row,col] of Object.entries(boardTemplate)) {
                 for (let i=0;i<3;i++){
                     const square = document.createElement("div")
@@ -51,8 +52,19 @@ const Gameboard = (function() {
                     square.classList.add(row)
                     square.classList.add(col[i])
 
+                    //to do: add diagonial class
+                    if ([1,5,9].includes(num)){
+                        square.classList.add("down")
+                    }
+                    if ([3,5,7].includes(num)){
+                        square.classList.add("up")
+                    }
+
                     square.addEventListener("click",()=>updateBoard(square), { once: true })
                     container.appendChild(square)
+                    
+                    //increment num
+                    num++
                 }
             }
         })
