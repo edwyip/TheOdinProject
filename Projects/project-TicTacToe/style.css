@@ -1,9 +1,13 @@
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap:1rem
+html,body {
+    padding:1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap:1rem;
+    height: max(500px, 100vh);
+    width: max(500px,100vh);
+    background-color: black;
+    color: aliceblue;
 }
 
 .container {
@@ -13,8 +17,8 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    height: max(80vh, 80vw);
-    width: max(80vh, 80vw);
+    height: max(50vh,360px);
+    width: max(50vh,360px)
 }
 
 .square {
@@ -24,5 +28,31 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: max(120px, 3.5vw)
+    align-content: center;
+    font-size: 10vh;
+    color:inherit;
+}
+
+.win {
+    color: green;
+}
+
+.players{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    width:100%;
+    justify-items: space-around;
+    font-size: 24px;
+    gap:2rem;
+}
+
+.players>div{
+    display: flex;
+    font-weight: 700;
+    justify-content: space-around;
+}
+
+.result{
+    height:3rem;
+    font-size: 2rem;
 }
