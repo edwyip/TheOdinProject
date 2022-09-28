@@ -1,0 +1,27 @@
+html,
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: max(80vh, 80vw);
+    width: max(80vh, 80vw);
+}
+
+.square {
+    background-color: lightgrey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: max(120px, 3.5vw)
+}
