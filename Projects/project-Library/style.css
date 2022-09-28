@@ -15,7 +15,7 @@ body {
 
 .header {
     display: flex;
-    font-size: 36px;
+    font-size: 40px;
     justify-content: space-around;
     align-items: center;
     padding: 1rem;
@@ -25,13 +25,16 @@ body {
 
 .logo {
     flex: 1;
+    font-weight: 700;
 }
 
 .new-book>button {
-    background-color: var(--b-color-text);
-    color: var(--b-color);
-    border-radius: 1rem;
+    color: var(--b-color-text);
+    background-color: var(--b-color);
+    border-radius: 0.5rem;
     padding: 0.5rem 1rem;
+    font-size: 20px;
+    border: 2px solid var(--b-color-text)
 }
 
 .new-book>button:hover {
