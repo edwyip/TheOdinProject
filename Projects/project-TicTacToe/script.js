@@ -1,11 +1,9 @@
-const Player = (hand) => {
-    const name = prompt(`Who's playing ${hand}?`)
+const Player = (inputname, hand) => {
+    const name = inputname
     const win = ()=>{
         const result = document.querySelector(".result")
         result.textContent=`Congradulation ${name}, You won!`
     }
-    const div = document.querySelector("."+hand)
-    div.textContent = name
     return { hand, name, win }
 }
 
@@ -22,19 +20,28 @@ const Gameboard = (function() {
     for (let item of boardList){
         board[item] = []
     }
+    let breakLoop=false
 
     const init = (container) => {
+        breakLoop = false
         turns = 9
-        hand ="X"
-        result,textContent = ""
+        hand = "X"
+        result.textContent = ""
         while(container.firstChild){
             container.removeChild(container.lastChild)
         }
         for (let item of boardList){
             board[item] = []
         }
-        players.X = Player("X")
-        players.O = Player("O")
+
+        let tagX = document.querySelector(".X")
+        let tagO = document.querySelector(".O")
+        players.X = Player(tagX.value, "X")
+        players.O = Player(tagO.value, "O")
+
+        DisplayController.changeInputToText("X")
+        DisplayController.changeInputToText("O")
+        document.querySelector(".newGame").disabled = true
     }
 
     const newBoard = () =>{
@@ -42,6 +49,21 @@ const Gameboard = (function() {
         
         //render new board
         newGameBtn.addEventListener("click", () => {
+            let tagX = document.querySelector(".X")
+            console.log(tagX.checkValidity())
+            let tagO = document.querySelector(".O")
+            while (!tagX.checkValidity() || !tagO.checkValidity()){
+                if (!tagX.checkValidity()){
+                    tagX.style.border = "2px solid red"
+                    tagX.style.color = "red"
+                    return
+                }
+                if (!tagO.checkValidity()){
+                    tagO.style.border = "2px solid red"
+                    tagO.style.color = "red"
+                    return
+                }
+            }
             const container = document.querySelector(".container")
             init(container)
             let num=1
@@ -80,6 +102,9 @@ const Gameboard = (function() {
                     [...document.querySelectorAll(".square")].forEach(square=>{
                         square.replaceWith(square.cloneNode(true))
                     })
+                    DisplayController.changeTexttoInput("X")
+                    DisplayController.changeTexttoInput("O")
+                    document.querySelector(".newGame").disabled = false
                 }
             }
         })
@@ -88,6 +113,7 @@ const Gameboard = (function() {
     }
 
     const endGame = (c)=>{
+        if (breakLoop) return
         const domClass = board[c]
 
         //check win, must bbe placed previous of draw
@@ -96,14 +122,14 @@ const Gameboard = (function() {
                 if (domClass[0]==="X"){
                     players.X.win()
                 } else {players.O.win()}
+                breakLoop = true
                 DisplayController.win([...document.querySelectorAll("."+ c)])
+                
                 return true
             }
         }
-
-        //check draw
+        
         if (turns === 0){
-            console.log("draw")
             DisplayController.draw()
             return true
         }
@@ -121,7 +147,23 @@ const DisplayController = (function(){
         result.textContent= "It's a draw.";
     }
 
-    return {win, draw}
+    const changeInputToText = (el)=>{
+        const input = document.querySelector("."+ el)
+        const text = document.createElement("div")
+        text.classList.add(el)
+        text.classList.add("inputText")
+        text.textContent = input.value
+        input.replaceWith(text)
+    }
+
+    const changeTexttoInput = (el)=>{
+        const text = document.querySelector("."+ el)
+        const input = document.createElement("input")
+        input.classList.add(el)
+        text.replaceWith(input)
+    }
+
+    return {win, draw, changeInputToText, changeTexttoInput}
 })()
 
 Gameboard.newBoard()
