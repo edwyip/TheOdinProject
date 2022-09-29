@@ -2,7 +2,7 @@ const Player = (hand) => {
     const name = prompt(`Who's playing ${hand}?`)
     const win = ()=>{
         const result = document.querySelector(".result")
-        result.textContent=`Congratualation ${name}, You won!`
+        result.textContent=`Congradulation ${name}, You won!`
     }
     const div = document.querySelector("."+hand)
     div.textContent = name

@@ -11,16 +11,23 @@
 </head>
 
 <body>
-    <div class="buttons">
-        <button class="newGame">New Game</button>
-    </div>
-    <div class="players">
-        <div class="p1">Player X: <div class="X"></div></div>
-        <div class="p2">Player O: <div class="O"></div></div>
+    <div class="header">
+        <div class="players">
+            <div class="p1">
+                <span>Player X: </span><input type="text" class="X" placeholder="Who plays X ?">
+            </div>
+            <div class="p2">
+                <span>Player O: </span><input type="text" class="O" placeholder="Who plays Y ?">
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="newGame">New Game</button>
+        </div>
+
     </div>
     <div class="result"></div>
     <div class="container"></div>
 </body>
-<script src="script.js"></script>
+<script src="./script.js"></script>
 
 </html>
